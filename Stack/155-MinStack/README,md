@@ -1,0 +1,26 @@
+# Min Stack
+
+## Intuition
+Instead of finding the minimum repeatedly, we store the minimum at each step.
+
+## Approach
+We use two stacks:
+- st1 stores all elements
+- st2 stores the minimum at each level
+
+While pushing:
+- Push element to st1
+- Push min(val, st2.top()) to st2
+
+While popping:
+- Pop from both stacks
+
+Top:
+- Return st1.top()
+
+GetMin:
+- Return st2.top()
+
+## Complexity
+Time: O(1) for all operations  
+Space: O(n)
